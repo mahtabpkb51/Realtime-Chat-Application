@@ -1,0 +1,459 @@
+/* ===================== TEXT CONTAINER ===================== */
+
+.textContainer {
+  width: 330px;
+  height: 720px;
+
+  padding: 26px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #111827;
+
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(37, 99, 235, 0.06);
+
+  color: #e2e8f0;
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ===================== LIGHT THEME ===================== */
+
+.light-theme .textContainer {
+  background: #ffffff;
+
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12),
+    0 0 35px rgba(59, 130, 246, 0.06);
+
+  color: #334155;
+}
+
+/* ===================== APP INFO ===================== */
+
+.appInfo {
+  text-align: center;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #334155;
+}
+
+.light-theme .appInfo {
+  border-bottom-color: #e2e8f0;
+}
+
+.appIcon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  border-radius: 18px;
+
+  font-size: 28px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.appInfo h1 {
+  margin: 0 0 8px;
+
+  color: #f8fafc;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.light-theme .appInfo h1 {
+  color: #1e293b;
+}
+
+.appDescription {
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ===================== FEATURES ===================== */
+
+.featureList {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 9px 11px;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+  border-radius: 9px;
+
+  text-align: left;
+
+  transition: all 0.2s ease;
+}
+
+.feature:hover {
+  background: #263449;
+  border-color: #475569;
+}
+
+.light-theme .feature {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.light-theme .feature:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.feature > span {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(37, 99, 235, 0.15);
+
+  border-radius: 7px;
+
+  font-size: 15px;
+}
+
+.feature p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+}
+
+.light-theme .feature p {
+  color: #475569;
+}
+
+/* ===================== USERS SECTION ===================== */
+
+.usersSection {
+  flex: 1;
+  min-height: 0;
+
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== USERS HEADER ===================== */
+
+.usersHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.usersHeader h2 {
+  margin: 0 0 3px;
+
+  color: #f8fafc;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.light-theme .usersHeader h2 {
+  color: #1e293b;
+}
+
+.usersHeader p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+/* ===================== USER COUNT ===================== */
+
+.userCount {
+  min-width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* ===================== ACTIVE USERS ===================== */
+
+.activeContainer {
+  flex: 1;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding-right: 4px;
+}
+
+.activeContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.activeContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.activeContainer::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+.activeContainer::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.light-theme .activeContainer::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.light-theme .activeContainer::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===================== ACTIVE USER ===================== */
+
+.activeItem {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 10px;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+  border-radius: 11px;
+
+  transition: all 0.2s ease;
+}
+
+.activeItem:hover {
+  background: #263449;
+  border-color: #475569;
+
+  transform: translateX(2px);
+}
+
+.light-theme .activeItem {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.light-theme .activeItem:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* ===================== USER AVATAR ===================== */
+
+.userAvatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* ===================== USER DETAILS ===================== */
+
+.userDetails {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.userName {
+  overflow: hidden;
+
+  color: #e2e8f0;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.light-theme .userName {
+  color: #334155;
+}
+
+/* ===================== ONLINE STATUS ===================== */
+
+.onlineText {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #22c55e;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.onlineText img {
+  width: 8px;
+  height: 8px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 0 4px rgba(34, 197, 94, 0.8)
+    );
+}
+
+/* ===================== OFFLINE STATUS ===================== */
+
+.offlineText {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.light-theme .offlineText {
+  color: #64748b;
+}
+
+.offlineDot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  display: inline-block;
+
+  background: #6b7280;
+
+  border-radius: 50%;
+}
+
+/* ===================== NO USERS ===================== */
+
+.noUsers {
+  margin: 10px 0;
+  padding: 14px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  background: #1e293b;
+
+  border: 1px dashed #334155;
+  border-radius: 10px;
+
+  font-size: 12px;
+}
+
+.light-theme .noUsers {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 900px) {
+  .textContainer {
+    display: none;
+  }
+}

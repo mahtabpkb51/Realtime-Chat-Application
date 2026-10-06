@@ -1,0 +1,675 @@
+/* ===================== MESSAGES CONTAINER ===================== */
+
+.messagesContainer {
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #020617;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ===================== LIGHT THEME ===================== */
+
+.light-theme .messagesContainer {
+  background: #f8fafc;
+}
+
+/* ===================== SEARCH BAR ===================== */
+
+.messageSearch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 8px 12px;
+  padding: 7px 10px;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.3s ease,
+    border 0.3s ease;
+}
+
+.light-theme .messageSearch {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+/* ===================== SEARCH INPUT ===================== */
+
+.searchIcon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.messageSearchInput {
+  flex: 1;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.light-theme .messageSearchInput {
+  color: #1e293b;
+}
+
+.messageSearchInput::placeholder {
+  color: #94a3b8;
+}
+
+/* ===================== CLEAR SEARCH ===================== */
+
+.clearSearchButton {
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #334155;
+  color: #fff;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.clearSearchButton:hover {
+  background: #475569;
+}
+
+.light-theme .clearSearchButton {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.light-theme .clearSearchButton:hover {
+  background: #cbd5e1;
+}
+
+/* ===================== SEARCH RESULT COUNT ===================== */
+
+.searchResultCount {
+  padding: 0 14px 6px;
+
+  color: #94a3b8;
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+/* ===================== SEARCH NAVIGATION ===================== */
+
+.searchNavigation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  flex-shrink: 0;
+}
+
+.searchPosition {
+  color: #94a3b8;
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+.searchNavButton {
+  width: 26px;
+  height: 26px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #334155;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchNavButton:hover {
+  background: #475569;
+}
+
+.light-theme .searchNavButton {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.light-theme .searchNavButton:hover {
+  background: #cbd5e1;
+}
+
+/* ===================== PINNED HEADER ===================== */
+
+.pinnedHeader {
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px 6px;
+
+  flex-shrink: 0;
+}
+
+.pinnedToggleButton {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 11px;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  background: #1e293b;
+  color: #fbbf24;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.pinnedToggleButton:hover {
+  background: #334155;
+  border-color: #475569;
+}
+
+.light-theme .pinnedToggleButton {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.light-theme .pinnedToggleButton:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* ===================== PINNED COUNT ===================== */
+
+.pinnedCount {
+  min-width: 20px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  border-radius: 10px;
+
+  background: #f59e0b;
+  color: #111827;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================== PINNED PANEL ===================== */
+
+.pinnedPanel {
+  margin: 0 12px 8px;
+
+  max-height: 220px;
+
+  overflow-y: auto;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35);
+
+  flex-shrink: 0;
+}
+
+.light-theme .pinnedPanel {
+  background: #ffffff;
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.10);
+}
+
+/* ===================== PINNED PANEL HEADER ===================== */
+
+.pinnedPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 9px 11px;
+
+  background: #1e293b;
+  color: #f8fafc;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  border-bottom: 1px solid #334155;
+}
+
+.light-theme .pinnedPanelHeader {
+  background: #f1f5f9;
+  color: #1e293b;
+  border-bottom-color: #cbd5e1;
+}
+
+.closePinnedButton {
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #334155;
+  color: #cbd5e1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closePinnedButton:hover {
+  background: #475569;
+  color: #fff;
+}
+
+.light-theme .closePinnedButton {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.light-theme .closePinnedButton:hover {
+  background: #cbd5e1;
+  color: #1e293b;
+}
+
+/* ===================== PINNED LIST ===================== */
+
+.pinnedList {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== PINNED ITEM ===================== */
+
+.pinnedItem {
+  width: 100%;
+
+  border: none;
+  border-bottom: 1px solid #1e293b;
+
+  background: transparent;
+  color: #e2e8f0;
+
+  padding: 9px 11px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.light-theme .pinnedItem {
+  border-bottom-color: #e2e8f0;
+  color: #334155;
+}
+
+.pinnedItem:last-child {
+  border-bottom: none;
+}
+
+.pinnedItem:hover {
+  background: #1e293b;
+}
+
+.light-theme .pinnedItem:hover {
+  background: #f1f5f9;
+}
+
+/* ===================== PINNED ITEM TOP ===================== */
+
+.pinnedItemTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.pinnedItemTop strong {
+  color: #60a5fa;
+
+  font-size: 11px;
+
+  text-transform: capitalize;
+}
+
+.light-theme .pinnedItemTop strong {
+  color: #2563eb;
+}
+
+/* ===================== PINNED ITEM TEXT ===================== */
+
+.pinnedItemText {
+  color: #e2e8f0;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.light-theme .pinnedItemText {
+  color: #334155;
+}
+
+/* ===================== PINNED BY ===================== */
+
+.pinnedItemBy {
+  margin-top: 3px;
+
+  color: #64748b;
+  font-size: 10px;
+}
+
+/* ===================== EMPTY PINNED ===================== */
+
+.emptyPinned {
+  padding: 18px 12px;
+
+  text-align: center;
+
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ===================== PINNED SCROLLBAR ===================== */
+
+.pinnedPanel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.pinnedPanel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pinnedPanel::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+.pinnedPanel::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.light-theme .pinnedPanel::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.light-theme .pinnedPanel::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===================== MESSAGES ===================== */
+
+.messages {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+
+  padding: 10px 15px;
+
+  scroll-behavior: smooth;
+}
+
+/* ===================== ACTIVE SEARCH RESULT ===================== */
+
+.activeSearchResult {
+  background: rgba(59, 130, 246, 0.08);
+
+  border-radius: 12px;
+
+  outline: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+.light-theme .activeSearchResult {
+  background: rgba(59, 130, 246, 0.06);
+
+  outline-color: rgba(37, 99, 235, 0.30);
+}
+
+/* ===================== PINNED MESSAGE HIGHLIGHT ===================== */
+
+.pinnedMessageHighlight {
+  background: rgba(245, 158, 11, 0.15);
+
+  border-radius: 12px;
+
+  outline: 2px solid rgba(245, 158, 11, 0.55);
+
+  transition: 0.2s ease;
+}
+
+/* ===================== NO SEARCH RESULTS ===================== */
+
+.noSearchResults {
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+/* ===================== MESSAGE SCROLLBAR ===================== */
+
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.light-theme .messages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.light-theme .messages::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 600px) {
+  .messageSearch {
+    margin: 6px 8px;
+    padding: 6px 8px;
+
+    border-radius: 9px;
+  }
+
+  .searchIcon {
+    font-size: 15px;
+  }
+
+  .messageSearchInput {
+    font-size: 13px;
+  }
+
+  .clearSearchButton {
+    width: 23px;
+    height: 23px;
+  }
+
+  .searchResultCount {
+    padding: 0 10px 5px;
+
+    font-size: 10px;
+  }
+
+  .messages {
+    padding: 8px 10px;
+  }
+
+  .pinnedHeader {
+    padding: 0 8px 5px;
+  }
+
+  .pinnedToggleButton {
+    gap: 5px;
+
+    padding: 6px 9px;
+
+    font-size: 11px;
+  }
+
+  .pinnedCount {
+    min-width: 18px;
+    height: 18px;
+
+    font-size: 9px;
+  }
+
+  .pinnedPanel {
+    margin: 0 8px 6px;
+
+    max-height: 180px;
+
+    border-radius: 9px;
+  }
+
+  .pinnedPanelHeader {
+    padding: 8px 9px;
+  }
+
+  .pinnedItem {
+    padding: 8px 9px;
+  }
+
+  .pinnedItemText {
+    font-size: 11px;
+  }
+
+  .pinnedItemBy {
+    font-size: 9px;
+  }
+
+  .searchNavigation {
+    gap: 3px;
+  }
+
+  .searchPosition {
+    font-size: 10px;
+  }
+
+  .searchNavButton {
+    width: 24px;
+    height: 24px;
+
+    font-size: 13px;
+  }
+
+  .noSearchResults {
+    min-height: 100px;
+
+    font-size: 13px;
+  }
+}
+
+/* ===================== SMALL MOBILE ===================== */
+
+@media (max-width: 400px) {
+  .messageSearch {
+    margin: 5px 6px;
+    padding: 5px 7px;
+  }
+
+  .messageSearchInput {
+    font-size: 12px;
+  }
+
+  .messages {
+    padding: 6px 7px;
+  }
+
+  .pinnedHeader {
+    padding: 0 6px 4px;
+  }
+
+  .pinnedToggleButton {
+    padding: 5px 8px;
+
+    font-size: 10px;
+  }
+
+  .pinnedPanel {
+    margin: 0 6px 5px;
+    max-height: 160px;
+  }
+
+  .searchNavButton {
+    width: 22px;
+    height: 22px;
+
+    font-size: 12px;
+  }
+}

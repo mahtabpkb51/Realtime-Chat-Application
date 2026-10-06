@@ -1,0 +1,514 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ===================== JOIN CONTAINER ===================== */
+
+.joinOuterContainer {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 25px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(37, 99, 235, 0.20),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(79, 70, 229, 0.18),
+      transparent 35%
+    ),
+    #0f172a;
+}
+
+/* ===================== BACKGROUND GLOW ===================== */
+
+.joinBackgroundGlow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.glowOne {
+  top: -120px;
+  left: -100px;
+
+  background: rgba(37, 99, 235, 0.15);
+}
+
+.glowTwo {
+  right: -100px;
+  bottom: -120px;
+
+  background: rgba(124, 58, 237, 0.15);
+}
+
+/* ===================== CARD ===================== */
+
+.joinInnerContainer {
+  width: 430px;
+
+  position: relative;
+  z-index: 2;
+
+  padding: 42px 40px 30px;
+
+  background: rgba(15, 23, 42, 0.90);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 0 50px rgba(37, 99, 235, 0.08);
+
+  backdrop-filter: blur(18px);
+}
+
+/* ===================== LOGO ===================== */
+
+.joinLogo {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 19px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  font-size: 30px;
+
+  box-shadow:
+    0 12px 30px rgba(37, 99, 235, 0.30);
+}
+
+/* ===================== HEADING ===================== */
+
+.heading {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.joinSubtitle {
+  max-width: 300px;
+
+  margin: 10px auto 24px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===================== AVATAR SECTION ===================== */
+
+.avatarSection {
+  margin-bottom: 22px;
+
+  text-align: center;
+}
+
+.avatarLabel {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===================== SELECTED AVATAR ===================== */
+
+.selectedAvatar {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  border: 2px solid rgba(96, 165, 250, 0.5);
+  border-radius: 50%;
+
+  font-size: 29px;
+
+  box-shadow:
+    0 8px 22px rgba(37, 99, 235, 0.25);
+}
+
+/* ===================== AVATAR OPTIONS ===================== */
+
+.avatarOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.avatarOption {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  background: #1e293b;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.avatarOption:hover {
+  transform: translateY(-2px);
+
+  background: #263449;
+  border-color: #475569;
+}
+
+.avatarOption.selected {
+  background: rgba(37, 99, 235, 0.18);
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 246, 0.10),
+    0 5px 15px rgba(37, 99, 235, 0.15);
+
+  transform: translateY(-2px);
+}
+
+/* ===================== INPUT GROUP ===================== */
+
+.inputGroup {
+  text-align: left;
+}
+
+.roomGroup {
+  margin-top: 18px;
+}
+
+.inputGroup label {
+  display: block;
+
+  margin: 0 0 8px 3px;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===================== INPUT ===================== */
+
+.joinInputWrapper {
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 15px;
+
+  background: #1e293b;
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 14px;
+
+  transition: all 0.2s ease;
+}
+
+.joinInputWrapper:focus-within {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.10);
+}
+
+.inputIcon {
+  font-size: 17px;
+
+  opacity: 0.75;
+}
+
+.joinInput {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #f8fafc;
+
+  font-size: 14px;
+}
+
+.joinInput::placeholder {
+  color: #64748b;
+}
+
+/* ===================== BUTTON ===================== */
+
+.joinLink {
+  display: block;
+
+  margin-top: 25px;
+
+  text-decoration: none;
+}
+
+.button {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+
+  transition: all 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+.joinArrow {
+  font-size: 20px;
+
+  transition: transform 0.2s ease;
+}
+
+.button:hover:not(:disabled) .joinArrow {
+  transform: translateX(4px);
+}
+
+/* ===================== FOOTER ===================== */
+
+.joinFooter {
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.footerDot {
+  color: #334155;
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 500px) {
+  .joinOuterContainer {
+    padding: 15px;
+  }
+
+  .joinInnerContainer {
+    width: 100%;
+
+    padding: 30px 25px 25px;
+
+    border-radius: 20px;
+  }
+
+  .heading {
+    font-size: 27px;
+  }
+
+  .joinLogo {
+    width: 58px;
+    height: 58px;
+
+    font-size: 27px;
+  }
+
+  .joinSubtitle {
+    margin-bottom: 20px;
+  }
+
+  .selectedAvatar {
+    width: 52px;
+    height: 52px;
+
+    font-size: 26px;
+  }
+
+  .avatarOption {
+    width: 36px;
+    height: 36px;
+
+    font-size: 18px;
+  }
+
+  .joinFooter {
+    gap: 5px;
+
+    font-size: 9px;
+  }
+}
+
+/* ===================== SMALL MOBILE ===================== */
+
+@media (max-width: 400px) {
+  .joinOuterContainer {
+    padding: 10px;
+  }
+
+  .joinInnerContainer {
+    padding: 25px 18px 20px;
+
+    border-radius: 18px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .joinLogo {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+  }
+
+  .joinSubtitle {
+    font-size: 12px;
+  }
+
+  .selectedAvatar {
+    width: 48px;
+    height: 48px;
+
+    font-size: 24px;
+  }
+
+  .avatarOptions {
+    gap: 5px;
+  }
+
+  .avatarOption {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+  .joinInputWrapper {
+    height: 50px;
+
+    padding: 0 12px;
+  }
+
+  .button {
+    height: 50px;
+
+    font-size: 14px;
+  }
+}

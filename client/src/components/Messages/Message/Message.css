@@ -1,0 +1,762 @@
+/* ===================== MESSAGE CONTAINER ===================== */
+
+.messageContainer {
+  display: flex;
+  align-items: flex-end;
+  margin: 8px 0;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+/* ===================== MESSAGE BOX ===================== */
+
+.messageBox {
+  max-width: 70%;
+  padding: 10px 14px;
+
+  border-radius: 14px;
+
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.backgroundBlue {
+  background: #2563eb;
+  color: #ffffff;
+
+  border-bottom-right-radius: 4px;
+}
+
+.backgroundLight {
+  background: #1e293b;
+  color: #e2e8f0;
+
+  border-bottom-left-radius: 4px;
+}
+
+.light-theme .backgroundLight {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+/* ===================== MESSAGE TEXT ===================== */
+
+.messageTextContainer {
+  position: relative;
+  min-width: 80px;
+}
+
+.messageText {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.messageUser {
+  margin: 0 0 5px;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.light-theme .messageUser {
+  color: #2563eb;
+}
+
+.messageTime {
+  display: inline-block;
+
+  margin-left: 8px;
+
+  font-size: 10px;
+
+  opacity: 0.7;
+}
+
+.editedLabel {
+  font-size: 10px;
+  font-style: italic;
+
+  opacity: 0.65;
+}
+
+/* ===================== REPLY ===================== */
+
+.replyPreview {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  margin-bottom: 7px;
+  padding: 6px 9px;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  border-left: 3px solid #60a5fa;
+  border-radius: 5px;
+
+  font-size: 12px;
+}
+
+.light-theme .replyPreview {
+  background: rgba(15, 23, 42, 0.08);
+  border-left-color: #2563eb;
+}
+
+.replyPreview strong {
+  color: #93c5fd;
+}
+
+.light-theme .replyPreview strong {
+  color: #2563eb;
+}
+
+.replyPreview span {
+  max-width: 220px;
+
+  overflow: hidden;
+
+  opacity: 0.85;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ===================== MESSAGE ACTIONS ===================== */
+
+.messageActions {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin: 0 5px;
+}
+
+/* ===================== REPLY BUTTON ===================== */
+
+.replyButton {
+  padding: 5px 9px;
+
+  border: 1px solid #334155;
+  border-radius: 15px;
+
+  background: #1e293b;
+  color: #cbd5e1;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.replyButton:hover {
+  background: #334155;
+}
+
+.light-theme .replyButton {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.light-theme .replyButton:hover {
+  background: #e2e8f0;
+}
+
+/* ===================== REACTIONS ===================== */
+
+.reactionWrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+/* ===================== REACTION PICKER ===================== */
+
+.reactions {
+  position: absolute;
+
+  right: 0;
+  bottom: calc(100% + 8px);
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  width: max-content;
+
+  padding: 7px 10px;
+
+  border-radius: 14px;
+
+  background: #20242b;
+
+  border: 1px solid #334155;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.4);
+
+  z-index: 9999;
+
+  white-space: nowrap;
+}
+
+.reactions button {
+  border: 0;
+
+  background: transparent;
+
+  padding: 4px;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+
+  transition: 0.2s ease;
+}
+
+.reactions button:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  transform: scale(1.2);
+}
+
+/* ===================== REACTION COUNT ===================== */
+
+.reactionCount {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 3px 6px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+}
+
+.light-theme .reactionCount {
+  background: #ffffff;
+
+  border-color: #cbd5e1;
+
+  color: #334155;
+}
+
+/* ===================== DELETE MENU ===================== */
+
+.sentMessageBottom {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.deleteMenuWrapper {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.deleteButton {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #334155;
+  border-radius: 50%;
+
+  background: #1e293b;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background: #334155;
+  border-color: #64748b;
+}
+
+.light-theme .deleteButton {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.light-theme .deleteButton:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.deleteMenu {
+  position: absolute;
+
+  right: 0;
+  bottom: 40px;
+
+  width: 190px;
+
+  padding: 6px;
+
+  background: #1e293b;
+
+  border: 1px solid #475569;
+  border-radius: 10px;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.light-theme .deleteMenu {
+  background: #ffffff;
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+.deleteMenu button {
+  width: 100%;
+
+  padding: 9px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #e2e8f0;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+.deleteMenu button:hover {
+  background: #334155;
+}
+
+.light-theme .deleteMenu button {
+  color: #334155;
+}
+
+.light-theme .deleteMenu button:hover {
+  background: #f1f5f9;
+}
+
+/* ===================== EDIT BUTTON ===================== */
+
+.editButton {
+  color: #60a5fa !important;
+}
+
+.editButton:hover {
+  background: #334155 !important;
+  color: #93c5fd !important;
+}
+
+.light-theme .editButton:hover {
+  background: #e2e8f0 !important;
+  color: #2563eb !important;
+}
+
+/* ===================== DELETE EVERYONE ===================== */
+
+.deleteMenu .deleteEveryone {
+  color: #f87171;
+}
+
+/* ===================== READ STATUS ===================== */
+
+.readStatus {
+  min-width: 20px;
+
+  color: #93c5fd;
+
+  font-size: 12px;
+}
+
+.light-theme .readStatus {
+  color: #2563eb;
+}
+
+/* ===================== FILE ===================== */
+
+.sharedFile {
+  display: inline-block;
+
+  margin-bottom: 4px;
+  padding: 8px 10px;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.light-theme .sharedFile {
+  background: rgba(15, 23, 42, 0.08);
+  color: #1e293b;
+}
+
+.sharedFile:hover {
+  text-decoration: underline;
+}
+
+.fileSize {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* ===================== IMAGE ===================== */
+
+.sharedImage {
+  display: block;
+
+  max-width: 250px;
+  max-height: 250px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  object-fit: cover;
+}
+
+.imagePreviewOverlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  z-index: 10000;
+
+  cursor: pointer;
+}
+
+.imagePreview {
+  max-width: 90%;
+  max-height: 90%;
+
+  border-radius: 10px;
+
+  object-fit: contain;
+}
+
+/* ===================== AUDIO ===================== */
+
+.audioMessage {
+  width: 250px;
+  max-width: 100%;
+
+  margin-bottom: 4px;
+}
+
+/* ===================== DELETED MESSAGE ===================== */
+
+.deletedMessageBubble {
+  padding: 3px 0;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ===================== SEARCH HIGHLIGHT ===================== */
+
+.searchHighlight {
+  padding: 1px 3px;
+
+  background: #facc15;
+  color: #111827;
+
+  border-radius: 3px;
+
+  font-weight: 700;
+}
+
+/* ===================== PIN BUTTON ===================== */
+
+.pinButton {
+  color: #fbbf24 !important;
+}
+
+.pinButton:hover {
+  background: #334155 !important;
+  color: #fde68a !important;
+}
+
+.light-theme .pinButton:hover {
+  background: #e2e8f0 !important;
+  color: #d97706 !important;
+}
+
+/* ===================== PINNED INDICATOR ===================== */
+
+.pinnedMessageIndicator {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin-bottom: 5px;
+  padding: 3px 7px;
+
+  background: rgba(245, 158, 11, 0.15);
+
+  border-radius: 5px;
+
+  color: #fbbf24;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* ===================== PIN NOTIFICATION ===================== */
+
+.pinNotificationWrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 10px 0;
+}
+
+.pinNotification {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  max-width: 80%;
+
+  padding: 7px 12px;
+
+  background: rgba(245, 158, 11, 0.12);
+
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: 20px;
+
+  color: #fbbf24;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.pinNotificationIcon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.pinNotificationText {
+  color: #f8fafc;
+
+  line-height: 1.4;
+}
+
+.light-theme .pinNotificationText {
+  color: #334155;
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 600px) {
+  .messageContainer {
+    margin: 6px 0;
+  }
+
+  .messageBox {
+    max-width: 82%;
+
+    padding: 9px 11px;
+
+    border-radius: 12px;
+  }
+
+  .messageText {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .messageUser {
+    font-size: 11px;
+  }
+
+  .messageTime {
+    font-size: 9px;
+  }
+
+  .messageActions {
+    gap: 3px;
+
+    margin: 0 3px;
+  }
+
+  .replyButton {
+    padding: 4px 7px;
+
+    font-size: 10px;
+  }
+
+  .reactions {
+    gap: 2px;
+  }
+
+  .reactions button {
+    padding: 2px;
+
+    font-size: 13px;
+  }
+
+  .reactionCount {
+    padding: 2px 5px;
+
+    font-size: 10px;
+  }
+
+  .sharedFile {
+    max-width: 100%;
+
+    padding: 7px 8px;
+
+    font-size: 13px;
+  }
+
+  .sharedImage {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .audioMessage {
+    width: 200px;
+  }
+
+  .deleteButton {
+    width: 29px;
+    height: 29px;
+
+    font-size: 18px;
+  }
+
+  .deleteMenu {
+    width: 170px;
+  }
+
+  .replyPreview span {
+    max-width: 180px;
+  }
+
+  .pinNotification {
+    max-width: 90%;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+  }
+
+  .pinNotificationIcon {
+    font-size: 13px;
+  }
+}
+
+/* ===================== SMALL MOBILE ===================== */
+
+@media (max-width: 400px) {
+  .messageBox {
+    max-width: 88%;
+
+    padding: 8px 10px;
+  }
+
+  .messageText {
+    font-size: 13px;
+  }
+
+  .messageActions {
+    gap: 2px;
+  }
+
+  .reactions button {
+    font-size: 12px;
+  }
+
+  .sharedImage {
+    max-width: 170px;
+    max-height: 170px;
+  }
+
+  .audioMessage {
+    width: 180px;
+  }
+
+  .deleteMenu {
+    width: 160px;
+  }
+
+  .replyPreview span {
+    max-width: 150px;
+  }
+
+  .pinNotification {
+    max-width: 94%;
+
+    padding: 5px 8px;
+
+    font-size: 10px;
+  }
+}

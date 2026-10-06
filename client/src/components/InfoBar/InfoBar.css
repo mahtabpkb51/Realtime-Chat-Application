@@ -1,0 +1,312 @@
+/* ===================== INFO BAR ===================== */
+
+.infoBar {
+  width: 100%;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.12);
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.3s ease,
+    border 0.3s ease;
+}
+
+/* ===================== LEFT ===================== */
+
+.leftInnerContainer {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+/* ===================== STATUS DOT ===================== */
+
+.statusDot {
+  width: 11px;
+  height: 11px;
+
+  flex-shrink: 0;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 12px rgba(34, 197, 94, 0.8);
+}
+
+/* ===================== ROOM INFO ===================== */
+
+.roomInfo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.roomInfo h3 {
+  margin: 0;
+
+  max-width: 280px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.roomInfo span {
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ===================== RIGHT ===================== */
+
+.rightInnerContainer {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+/* ===================== ONLINE STATUS ===================== */
+
+.onlineStatus {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.15);
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.onlineIcon {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+}
+
+/* ===================== THEME BUTTON ===================== */
+
+.themeButton {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.themeButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+
+  transform: rotate(15deg) scale(1.05);
+}
+
+.themeButton:active {
+  transform: scale(0.95);
+}
+
+/* ===================== CLOSE BUTTON ===================== */
+
+.closeButton {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.closeButton img {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+
+  transform: rotate(90deg);
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 600px) {
+  .infoBar {
+    height: 70px;
+
+    padding: 0 14px;
+  }
+
+  .leftInnerContainer {
+    gap: 9px;
+  }
+
+  .statusDot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .roomInfo h3 {
+    max-width: 180px;
+
+    font-size: 18px;
+  }
+
+  .roomInfo span {
+    font-size: 11px;
+  }
+
+  .rightInnerContainer {
+    gap: 7px;
+  }
+
+  .onlineStatus {
+    display: none;
+  }
+
+  .themeButton {
+    width: 34px;
+    height: 34px;
+
+    font-size: 15px;
+  }
+
+  .closeButton {
+    width: 34px;
+    height: 34px;
+  }
+
+  .closeButton img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ===================== SMALL MOBILE ===================== */
+
+@media (max-width: 400px) {
+  .infoBar {
+    height: 64px;
+
+    padding: 0 10px;
+  }
+
+  .leftInnerContainer {
+    gap: 7px;
+  }
+
+  .roomInfo h3 {
+    max-width: 150px;
+
+    font-size: 16px;
+  }
+
+  .roomInfo span {
+    font-size: 10px;
+  }
+
+  .rightInnerContainer {
+    gap: 5px;
+  }
+
+  .themeButton {
+    width: 32px;
+    height: 32px;
+
+    font-size: 14px;
+  }
+
+  .closeButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .closeButton img {
+    width: 15px;
+    height: 15px;
+  }
+}

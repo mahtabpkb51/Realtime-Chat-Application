@@ -1,0 +1,630 @@
+/* ===================== INPUT FORM ===================== */
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+
+  background: #0f172a;
+
+  border-top: 1px solid #334155;
+
+  position: relative;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.light-theme .form {
+  background: #f8fafc;
+  border-top-color: #cbd5e1;
+}
+
+/* ===================== INPUT WRAPPER ===================== */
+
+.inputWrapper {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  position: relative;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  padding: 5px 8px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.light-theme .inputWrapper {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+/* ===================== TEXT INPUT ===================== */
+
+.input {
+  flex: 1;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #fff;
+
+  font-size: 15px;
+  padding: 9px 5px;
+}
+
+.light-theme .input {
+  color: #1e293b;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+/* ===================== FILE & EMOJI BUTTON ===================== */
+
+.fileButton,
+.emojiButton,
+.voiceButton,
+.stopVoiceButton {
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.fileButton,
+.emojiButton {
+  width: 34px;
+  height: 34px;
+
+  background: transparent;
+
+  font-size: 20px;
+
+  border-radius: 8px;
+}
+
+.fileButton:hover,
+.emojiButton:hover {
+  background: #334155;
+}
+
+.light-theme .fileButton:hover,
+.light-theme .emojiButton:hover {
+  background: #e2e8f0;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+/* ===================== EMOJI PICKER ===================== */
+
+.emojiPicker {
+  position: absolute;
+
+  bottom: 55px;
+  left: 0;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.5);
+
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.emojiLoading {
+  width: 320px;
+  height: 350px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1e293b;
+  color: #fff;
+}
+
+.light-theme .emojiLoading {
+  background: #ffffff;
+  color: #1e293b;
+}
+
+/* ===================== VOICE BUTTON ===================== */
+
+.voiceButton,
+.stopVoiceButton {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  background: #1e293b;
+  color: #fff;
+
+  border: 1px solid #334155;
+}
+
+.voiceButton:hover {
+  background: #334155;
+}
+
+.light-theme .voiceButton {
+  background: #ffffff;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+.light-theme .voiceButton:hover {
+  background: #e2e8f0;
+}
+
+.stopVoiceButton {
+  background: #dc2626;
+  border-color: #ef4444;
+}
+
+.stopVoiceButton:hover {
+  background: #b91c1c;
+}
+
+/* ===================== RECORDING BOX ===================== */
+
+.recordingBox {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 8px;
+
+  color: #f87171;
+  font-size: 14px;
+}
+
+.recordingDot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #ef4444;
+
+  animation: recordingPulse 1s infinite;
+}
+
+.recordingTime {
+  margin-left: auto;
+
+  color: #cbd5e1;
+
+  font-variant-numeric: tabular-nums;
+}
+
+.light-theme .recordingTime {
+  color: #475569;
+}
+
+@keyframes recordingPulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===================== SEND BUTTON ===================== */
+
+.sendButton {
+  min-width: 75px;
+  height: 42px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #fff;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.sendButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.sendIcon {
+  font-size: 16px;
+}
+
+/* ===================== REPLY PREVIEW ===================== */
+
+.inputReplyPreview {
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 9px 12px;
+
+  background: #1e293b;
+
+  border: 1px solid #475569;
+  border-left: 3px solid #60a5fa;
+
+  border-radius: 9px;
+
+  color: #e2e8f0;
+
+  z-index: 1000;
+}
+
+.light-theme .inputReplyPreview {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  border-left-color: #2563eb;
+  color: #334155;
+}
+
+.inputReplyInfo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.inputReplyTitle {
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.light-theme .inputReplyTitle {
+  color: #2563eb;
+}
+
+.inputReplyText {
+  max-width: 500px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.light-theme .inputReplyText {
+  color: #64748b;
+}
+
+.cancelReplyButton {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #334155;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.cancelReplyButton:hover {
+  background: #475569;
+}
+
+.light-theme .cancelReplyButton {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.light-theme .cancelReplyButton:hover {
+  background: #cbd5e1;
+}
+
+/* ===================== EDIT PREVIEW ===================== */
+
+.inputEditPreview {
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 9px 12px;
+
+  background: #1e293b;
+
+  border: 1px solid #475569;
+  border-left: 3px solid #f59e0b;
+
+  border-radius: 9px;
+
+  color: #e2e8f0;
+
+  z-index: 1000;
+}
+
+.light-theme .inputEditPreview {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  border-left-color: #f59e0b;
+  color: #334155;
+}
+
+.inputEditInfo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.inputEditTitle {
+  color: #fbbf24;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.inputEditHint {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.inputEditText {
+  max-width: 500px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.light-theme .inputEditText {
+  color: #64748b;
+}
+
+.cancelEditButton {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #334155;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.cancelEditButton:hover {
+  background: #475569;
+}
+
+.light-theme .cancelEditButton {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.light-theme .cancelEditButton:hover {
+  background: #cbd5e1;
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 600px) {
+  .form {
+    gap: 5px;
+    padding: 7px;
+  }
+
+  .inputWrapper {
+    gap: 2px;
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .fileButton,
+  .emojiButton {
+    width: 30px;
+    height: 30px;
+
+    font-size: 17px;
+  }
+
+  .voiceButton,
+  .stopVoiceButton {
+    width: 38px;
+    height: 38px;
+
+    font-size: 16px;
+  }
+
+  .sendButton {
+    width: 48px;
+    min-width: 48px;
+    height: 38px;
+
+    border-radius: 9px;
+  }
+
+  .sendButton span:first-child {
+    display: none;
+  }
+
+  .sendIcon {
+    font-size: 17px;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 8px 3px;
+  }
+
+  /* ===================== MOBILE EMOJI ===================== */
+
+  .emojiPicker {
+    left: 50%;
+    right: auto;
+    bottom: 50px;
+
+    width: 300px;
+    max-width: calc(100vw - 20px);
+
+    transform: translateX(-50%);
+  }
+
+  .emojiLoading {
+    width: 100%;
+    max-width: 300px;
+    height: 320px;
+  }
+
+  /* ===================== MOBILE REPLY / EDIT ===================== */
+
+  .inputReplyPreview,
+  .inputEditPreview {
+    left: 7px;
+    right: 7px;
+    bottom: 58px;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+  }
+
+  .inputReplyText,
+  .inputEditText {
+    max-width: calc(100vw - 95px);
+  }
+
+  .inputReplyTitle,
+  .inputEditTitle {
+    font-size: 11px;
+  }
+
+  .inputEditHint {
+    font-size: 9px;
+  }
+}
+
+/* ===================== SMALL MOBILE ===================== */
+
+@media (max-width: 400px) {
+  .form {
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .inputWrapper {
+    padding: 3px;
+  }
+
+  .fileButton,
+  .emojiButton {
+    width: 28px;
+    height: 28px;
+
+    font-size: 16px;
+  }
+
+  .voiceButton,
+  .stopVoiceButton {
+    width: 36px;
+    height: 36px;
+
+    font-size: 15px;
+  }
+
+  .sendButton {
+    width: 42px;
+    min-width: 42px;
+    height: 36px;
+  }
+
+  .input {
+    font-size: 13px;
+  }
+
+  .inputReplyPreview,
+  .inputEditPreview {
+    bottom: 55px;
+  }
+}
